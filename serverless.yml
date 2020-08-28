@@ -1,0 +1,25 @@
+service: distrimage
+package:
+  individually: true
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-east-1
+  role: arn:aws:iam::511702183779:role/service-role/distrimage-lambda-role
+
+custom:
+  domain: digitalpainting.school
+  targetRegion: eu-central-1
+
+functions:
+  viewerRequest:
+    handler: src/viewerRequest.handler
+    memorySize: 128
+    timeout: 5
+    package:
+      exclude:
+        - node_modules/**
+  originResponse:
+    handler: src/originResponse.handler
