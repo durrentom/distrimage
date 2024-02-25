@@ -1,7 +1,7 @@
 'use strict';
 
-const BUCKET = 'site-digitalpainting.school';
-const DOMAIN = 'digitalpainting.school';
+const BUCKET = 'bucketname';
+const DOMAIN = 'domain.com';
 const TARGET_REGION = 'eu-central-1';
 const BASE_URL = 'https://' + DOMAIN;
 
